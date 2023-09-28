@@ -1,0 +1,25 @@
+local OriLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shlexware/Orion/main/source')))()
+local Win =  OriLib:MakeWindow({Name = "Violet", HidePremium = false, SaveConfig = true, ConfigFolder = ConfigFolder = "VioletConf"})
+local Geral = Window:MakeTab({
+	Name = "Geral",
+	Icon = "rbxassetid://4483345998",
+	PremiumOnly = false
+})
+local Section = Geral:AddSection({
+	Name = "AutoParry"
+})
+Geral:AddToggle({
+	Name = "ParryAuto",
+	Default = false,
+	Callback = function(Value)
+		print(Value)
+	end    
+})
+
+G.AutoParry = true
+function AutoParry()
+    while AutoParry == true do
+        local parrys = loadstring(game:HttpGet(('https://github.com/ApolloThdz/AutoParryS/blob/main/Parry')))()
+    end
+end
+
